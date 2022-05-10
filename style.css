@@ -1,0 +1,334 @@
+:root {
+    --main: #000000;
+    --contrast: #ffffff;
+    --focused: #7a0000;
+    --random: #8700DC;
+    --previous: #3e00bb;
+    --next: #0AC728;
+    --infinite:  #FF00F2;
+}
+
+header {
+    position: relative;
+    bottom: 7em;
+}
+
+body {
+    min-height: 98vh;
+    background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);    
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 .5em 1em 0 var(--main);
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: 500ms;
+    transition-property: box-shadow;
+}
+
+button:hover {
+    transition: 500ms;
+    box-shadow: 0 0 1em 0 var(--contrast);
+}
+
+img {
+    aspect-ratio: 1/1;
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: 200;
+    margin: 1em 0 .5em 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--contrast);
+    font-size: 1.2em;
+    margin: 0;
+}
+
+input {
+    background-color: transparent;
+}
+
+input[type=range] {
+    height: 1em;
+    -webkit-appearance: none;
+    margin: 2em;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: .9em;
+    cursor: pointer;
+    box-shadow: .1em .1em .5em 0 var(--main);
+    background: transparent;
+    border-radius: 1em;
+    border: .25em solid var(--contrast);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    border: .25em solid var(--contrast);
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 25px;
+    background: var(--contrast);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -.48em;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: .9em;
+    cursor: pointer;
+    box-shadow: .1em .1em .5em var(--main);
+    background: transparent;
+    border-radius: 1em;
+    border: .05em solid var(--contrast);
+}
+
+input[type=range]::-moz-range-thumb {
+    border: .05em solid var(--contrast);
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    background: var(--contrast);
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: .5em;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: transparent;
+    border: .1em solid var(--contrast);
+    border-radius: 2em;
+    box-shadow: .1em .1em .5em var(--main);
+}
+
+input[type=range]::-ms-fill-upper {
+    background: transparent;
+    border: .1em solid var(--contrast);
+    border-radius: 32px;
+    box-shadow: .1em .1em .1em var(--main);
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    border: .1em solid var(--contrast);
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 25px;
+    background: var(--contrast);
+    cursor: pointer;
+}
+
+
+input[type=range]:focus::-ms-fill-lower {
+    background: transparent;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: transparent;
+}
+
+#switch {
+    position: relative;
+    display: inline-block;
+    width: 6em;
+    height: 1.5em;
+}
+
+#switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main);
+    border-radius: 1em;
+    transition: .4s;
+}
+
+#slider::before {
+    position: absolute;
+    content: "Song";
+    color: var(--main);
+    height: 1.5em;
+    width: 4em;
+    background-color: var(--contrast);
+    border-radius: 1em;
+    transition: .4s;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+input[type=checkbox]:checked + #slider {
+    content: "Video";
+    background-color: var(--contrast);
+}
+
+input[type=checkbox]:hover + #slider {
+    box-shadow: 0 0 .5em 0 var(--main);
+}
+
+input[type=checkbox]:checked + #slider:before {
+    content: "Video";
+    color: var(--contrast);
+    transform: translateX(2em);
+    background-color: var(--main);
+}
+
+#cover {
+    width: 17em;
+    background-color: var(--main);
+    box-shadow: 0 0 .25em 0  var(--contrast);
+}
+
+#like_button {
+    margin: 1.5em 0 0 0;
+    width: 3em;
+    height: 3em;
+    border: none;
+    background-color: var(--contrast);
+    border-radius: 55%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    transition: 500ms;
+    transition-property: background-color, box-shadow;
+}
+
+#like_button:focus {
+    transition: 500ms;
+    background-color: var(--focused);
+    box-shadow: 0 0 1em 0 var(--focused);
+}
+
+#like_img {
+    aspect-ratio: 1/1;
+    width: 3em;
+    margin: 1em;
+}
+
+#back_screen {
+    aspect-ratio: 9/16;
+    width: 30em;
+    border-radius: 1em;
+    background-color: var(--main);
+    background-image: url("https://avatars.githubusercontent.com/u/90356347?s=400&u=6d6ac1571867c107505012e6fad4590dd474f5d0&v=4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#screen {
+    aspect-ratio: 9/16;
+    width: 30em;
+    color: var(--contrast);
+    background-color: transparent;
+    backdrop-filter: blur(1em);
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 var(--main);
+}
+
+#control {
+    width: 40vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#control button{
+    height: 5em;
+    width: 5em;
+    background-color: var(--contrast);
+    margin: 0 .5em;
+    transition: 500ms;
+    transition-property: background-color;
+}
+
+#control img {
+    width: 4em;
+}
+
+#p-p {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+#play{
+    display: none;
+}
+
+#p-p:focus {
+    transition: 500ms;
+    background-color: #7a0000;
+}
+
+#p-p:focus #play{
+    display: grid;
+}
+
+#p-p:focus #pause {
+    display: none;
+}
+
+#random:focus {
+    transition: 500ms;
+    background-color: var(--random);
+}
+
+#previous:focus {
+    transition: 500ms;
+    background-color: var(--previous);
+}
+
+#next:focus {
+    transition: 500ms;
+    background-color: var(--next);
+}
+
+#infinite:focus {
+    transition: 500ms;
+    background-color: var(--infinite);
+}
