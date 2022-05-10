@@ -313,12 +313,6 @@ input[type=checkbox]:checked + #slider:before {
     transition-property: background-color, box-shadow;
 }
 
-#share_button:focus {
-    transition: 500ms;
-    background-color: var(--pinky);
-    box-shadow: 0 0 1em 0 var(--pinky);
-}
-
 #like_button {
     transition: 500ms;
     transition-property: background-color, box-shadow;
@@ -422,6 +416,12 @@ input[type=checkbox]:checked + #slider:before {
 
 #ds_items {
     display:none;
+}
+
+#dropside:focus-within #share_button {
+    transition: 500ms;
+    background-color: var(--pinky);
+    box-shadow: 0 0 1em 0 var(--pinky);
 }
 
 #dropside:focus-within #ds_items {
