@@ -15,16 +15,67 @@
 :root {
     --main: #000000;
     --contrast: #ffffff;
-    --focused: #7a0000;
-    --random: #8700DC;
-    --previous: #3e00bb;
-    --next: #0AC728;
-    --infinite:  #FF00F2;
+    --passion: #970202;
+    --violet: #8700DC;
+    --pinky:  #FF00F2;
 }
 
 header {
+    min-width: 41.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    bottom: 7em;
+    bottom: 5.5em;
+}
+
+header img {
+    aspect-ratio: 1/1;
+    width: 2.5em;
+}
+
+header button {
+    width: 3.7em;
+    background-color: var(--contrast);
+}
+
+#back_button:focus {
+    transition: 500ms;
+    background-color: var(--violet);
+    box-shadow: 0 0 1em 0 var(--violet);
+}
+
+#dropdown {
+    position: relative;
+    display: inline-flexbox;
+}
+
+#dd_items {
+    display: none;
+}
+
+#dd_items img {
+    display: block;
+}
+
+#dropdown:focus-within #dd_button {
+    transition: 500ms;
+    background-color: var(--passion);
+    box-shadow: 0 0 1em 0 var(--passion);
+}
+
+#dropdown:focus-within #dd_items{
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 3.1em;
+}
+
+#dropdown:focus-within .dd_options:hover, .dd_options:focus {
+    transition: 500ms;
+    background-color: var(--pinky);
+    box-shadow: 0 0 1em 0 var(--pinky);
 }
 
 body {
@@ -45,6 +96,7 @@ div {
 }
 
 button {
+    aspect-ratio: 1/1;
     border: none;
     border-radius: 50%;
     box-shadow: 0 .5em 1em 0 var(--main);
@@ -197,6 +249,7 @@ input[type=range]:focus::-ms-fill-upper {
     right: 0;
     bottom: 0;
     background-color: var(--main);
+    box-shadow: 0 0 .1em var(--contrast);
     border-radius: 1em;
     transition: .4s;
 }
@@ -221,13 +274,13 @@ input[type=checkbox]:checked + #slider {
 }
 
 input[type=checkbox]:hover + #slider {
-    box-shadow: 0 0 .5em 0 var(--main);
+    box-shadow: 0 0 .5em 0 var(--contrast);
 }
 
 input[type=checkbox]:checked + #slider:before {
     content: "Video";
     color: var(--contrast);
-    transform: translateX(2em);
+    transform: translateX(2.035em);
     background-color: var(--main);
 }
 
@@ -237,30 +290,60 @@ input[type=checkbox]:checked + #slider:before {
     box-shadow: 0 0 .25em 0  var(--contrast);
 }
 
-#like_button {
-    margin: 1.5em 0 0 0;
-    width: 3em;
-    height: 3em;
+#mid_buttons {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#mid_buttons button {
+    margin: 1.5em 1.5em 0 1.5em;
+    width: 4em;
+    height: 4em;
     border: none;
     background-color: var(--contrast);
     border-radius: 55%;
     display: grid;
     justify-content: center;
     align-content: center;
+}
+
+#mid_buttons img {
+    width: 3em;
+    margin: 1em;
+}
+
+#add_button {
+    transition: 500ms;
+    transition-property: background-color, box-shadow;
+}
+
+#add_button:focus {
+    transition: 500ms;
+    background-color: var(--violet);
+    box-shadow: 0 0 1em 0 var(--violet);
+}
+
+#share_button {
+    transition: 500ms;
+    transition-property: background-color, box-shadow;
+}
+
+#share_button:focus {
+    transition: 500ms;
+    background-color: var(--pinky);
+    box-shadow: 0 0 1em 0 var(--pinky);
+}
+
+#like_button {
     transition: 500ms;
     transition-property: background-color, box-shadow;
 }
 
 #like_button:focus {
     transition: 500ms;
-    background-color: var(--focused);
-    box-shadow: 0 0 1em 0 var(--focused);
-}
-
-#like_img {
-    aspect-ratio: 1/1;
-    width: 3em;
-    margin: 1em;
+    background-color: var(--passion);
+    box-shadow: 0 0 1em 0 var(--passion);
 }
 
 #back_screen {
@@ -316,7 +399,7 @@ input[type=checkbox]:checked + #slider:before {
 
 #p-p:focus {
     transition: 500ms;
-    background-color: #7a0000;
+    background-color: var(--passion);
 }
 
 #p-p:focus #play{
@@ -329,20 +412,20 @@ input[type=checkbox]:checked + #slider:before {
 
 #random:focus {
     transition: 500ms;
-    background-color: var(--random);
+    background-color: var(--violet);
 }
 
 #previous:focus {
     transition: 500ms;
-    background-color: var(--previous);
+    background-color: var(--violet);
 }
 
 #next:focus {
     transition: 500ms;
-    background-color: var(--next);
+    background-color: var(--pinky);
 }
 
 #infinite:focus {
     transition: 500ms;
-    background-color: var(--infinite);
+    background-color: var(--pinky);
 }

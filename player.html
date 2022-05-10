@@ -29,20 +29,56 @@
         <div id = "back_screen">
             <div id = "screen">
                 <header>
+                    <label>
+                        <button id = "back_button">
+                            <img src="imgs/back.png"/>
+                        </button>
+                    </label>
                     <label id = "switch">
                         <input type="checkbox"/>
                         <span id = "slider"></span>
                     </label>
+                    <div id = "dropdown">
+                        <button id = "dd_button">
+                            <img src="imgs/plus.png"/>
+                        </button>
+                        <nav id = "dd_items">
+                            <button class = "dd_options">
+                                <img src="imgs/cloud-computing.png"/>
+                            </button>
+                            <button class = "dd_options">
+                                <img src="imgs/resolution.png"/>
+                            </button>
+                            <button class = "dd_options">
+                                <img src="imgs/flag.png"/>
+                            </button>
+                            <button class = "dd_options">
+                                <img src="imgs/subtitles.png"/>
+                            </button>
+                        </nav>
+                    </div>
                 </header>
                 <div>
                     <img id = "cover"src = "https://avatars.githubusercontent.com/u/90356347?s=400&u=6d6ac1571867c107505012e6fad4590dd474f5d0&v=4"/>
                     <h1><a href = "https://codepen.io/cromega08">Superbus et Hedonistic~</a></h1>
                     <a href="https://github.com/Cromega08" target="_blank">Cromega</a>
-                    <label>
-                        <button id = "like_button">
-                            <img id = "like_img" src="imgs/heart.png"/>
-                        </button>
-                    </label>
+                    <div id = "mid_buttons">
+                        <label>
+                            <button id = "add_button">
+                                <img src="imgs/plus.png"/>
+                            </button>
+                        </label>
+                        <label>
+                            <button id = "like_button">
+                                <img src="imgs/heart.png"/>
+                            </button>
+                        </label>
+                        <label>
+                            <button id = "share_button">
+                                <img src="imgs/share.png"/>
+                            </button>
+                        </label>
+                    </div>
                     <input type="range"/>
                     <div id = "control">
                         <label>
@@ -57,7 +93,7 @@
                         </label>
                         <label>
                             <button id = "p-p">
-                                <img id = "pause" src="imgs/pause (1).png"/>
+                                <img id = "pause" src="imgs/pause.png"/>
                                 <img id = "play" src="imgs/play.png"/>
                             </button>
                         </label>
