@@ -247,6 +247,27 @@ input[type=checkbox]:checked + #slider:before {
     background-color: var(--main);
 }
 
+#back_screen {
+    aspect-ratio: 9/16;
+    width: 30em;
+    border-radius: 1em;
+    background-color: var(--main);
+    background-image: url("https://avatars.githubusercontent.com/u/90356347?s=400&u=6d6ac1571867c107505012e6fad4590dd474f5d0&v=4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#screen {
+    aspect-ratio: 9/16;
+    width: 30em;
+    color: var(--contrast);
+    background-color: transparent;
+    backdrop-filter: blur(1em);
+    border-radius: 1em;
+    box-shadow: 0 0 1em 0 var(--main);
+}
+
 #cover {
     width: 17em;
     background-color: var(--main);
@@ -283,8 +304,8 @@ input[type=checkbox]:checked + #slider:before {
 
 #add_button:focus {
     transition: 500ms;
-    background-color: var(--violet);
-    box-shadow: 0 0 1em 0 var(--violet);
+    background-color: var(--pinky);
+    box-shadow: 0 0 1em 0 var(--pinky);
 }
 
 #share_button {
@@ -305,29 +326,8 @@ input[type=checkbox]:checked + #slider:before {
 
 #like_button:focus {
     transition: 500ms;
-    background-color: var(--passion);
-    box-shadow: 0 0 1em 0 var(--passion);
-}
-
-#back_screen {
-    aspect-ratio: 9/16;
-    width: 30em;
-    border-radius: 1em;
-    background-color: var(--main);
-    background-image: url("https://avatars.githubusercontent.com/u/90356347?s=400&u=6d6ac1571867c107505012e6fad4590dd474f5d0&v=4");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#screen {
-    aspect-ratio: 9/16;
-    width: 30em;
-    color: var(--contrast);
-    background-color: transparent;
-    backdrop-filter: blur(1em);
-    border-radius: 1em;
-    box-shadow: 0 0 1em 0 var(--main);
+    background-color: var(--pinky);
+    box-shadow: 0 0 1em 0 var(--pinky);
 }
 
 #control {
@@ -373,24 +373,12 @@ input[type=checkbox]:checked + #slider:before {
     display: none;
 }
 
-#random:focus {
-    transition: 500ms;
-    background-color: var(--violet);
-}
-
-#previous:focus {
-    transition: 500ms;
-    background-color: var(--violet);
-}
-
-#next:focus {
-    transition: 500ms;
-    background-color: var(--pinky);
-}
-
+#random:focus,
+#previous:focus,
+#next:focus,
 #infinite:focus {
     transition: 500ms;
-    background-color: var(--pinky);
+    background-color: var(--passion);
 }
 
 #back_button:focus {
@@ -408,14 +396,10 @@ input[type=checkbox]:checked + #slider:before {
     display: none;
 }
 
-#dd_items img {
-    display: block;
-}
-
 #dropdown:focus-within #dd_button {
     transition: 500ms;
-    background-color: var(--passion);
-    box-shadow: 0 0 1em 0 var(--passion);
+    background-color: var(--violet);
+    box-shadow: 0 0 1em 0 var(--violet);
 }
 
 #dropdown:focus-within #dd_items{
@@ -427,6 +411,38 @@ input[type=checkbox]:checked + #slider:before {
 
 #dropdown:focus-within .dd_options:hover, .dd_options:focus {
     transition: 500ms;
+    background-color: var(--violet);
+    box-shadow: 0 0 1em 0 var(--violet);
+}
+
+#dropside {
+    position:relative;
+    display: inline-flex;
+}
+
+#ds_items {
+    display:none;
+}
+
+#dropside:focus-within #ds_items {
+    z-index: 1;
+    display: inline-flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 5.5em;
+    bottom: 0;
+}
+
+#dropside:focus-within .ds_options:hover, .ds_options:focus {
+    transition: 500ms;
     background-color: var(--pinky);
     box-shadow: 0 0 1em 0 var(--pinky);
+}
+
+.dd_options {
+    margin: .5em;
+}
+
+.ds_options {
+    margin: .5em;
 }
