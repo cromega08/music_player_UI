@@ -40,44 +40,6 @@ header button {
     background-color: var(--contrast);
 }
 
-#back_button:focus {
-    transition: 500ms;
-    background-color: var(--violet);
-    box-shadow: 0 0 1em 0 var(--violet);
-}
-
-#dropdown {
-    position: relative;
-    display: inline-flexbox;
-}
-
-#dd_items {
-    display: none;
-}
-
-#dd_items img {
-    display: block;
-}
-
-#dropdown:focus-within #dd_button {
-    transition: 500ms;
-    background-color: var(--passion);
-    box-shadow: 0 0 1em 0 var(--passion);
-}
-
-#dropdown:focus-within #dd_items{
-    z-index: 1;
-    display: block;
-    position: absolute;
-    top: 3.1em;
-}
-
-#dropdown:focus-within .dd_options:hover, .dd_options:focus {
-    transition: 500ms;
-    background-color: var(--pinky);
-    box-shadow: 0 0 1em 0 var(--pinky);
-}
-
 body {
     min-height: 98vh;
     background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);    
@@ -428,4 +390,42 @@ input[type=checkbox]:checked + #slider:before {
 #infinite:focus {
     transition: 500ms;
     background-color: var(--pinky);
+}
+
+#back_button:focus {
+    transition: 500ms;
+    background-color: var(--violet);
+    box-shadow: 0 0 1em 0 var(--violet);
+}
+
+#dropdown {
+    position: relative;
+    display: inline-flexbox;
+}
+
+#dd_items {
+    display: none;
+}
+
+#dd_items img {
+    display: block;
+}
+
+#dropdown:focus-within #dd_button {
+    transition: 500ms;
+    background-color: var(--passion);
+    box-shadow: 0 0 1em 0 var(--passion);
+}
+
+#dropdown:focus-within #dd_items{
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 3.1em;
+}
+
+#dropdown:focus-within .dd_options:hover, .dd_options:focus {
+    transition: 500ms;
+    background-color: var(--pinky);
+    box-shadow: 0 0 1em 0 var(--pinky);
 }
